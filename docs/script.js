@@ -1,0 +1,8 @@
+(function(){
+  var b=document.querySelector('.menu-toggle'),n=document.querySelector('nav.main');
+  if(!b||!n)return;
+  b.addEventListener('click',function(){
+    var o=n.classList.toggle('open');
+    b.setAttribute('aria-expanded',o?'true':'false');
+  });
+})();
