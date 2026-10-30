@@ -127,3 +127,23 @@ section{padding:52px 0}
  footer.site .wrap{gap:18px}
 }
 .hero figure img,.two img{height:auto}
+/* hero mejorado: texto + collage de fotos del estudio */
+.hero{background:linear-gradient(180deg,#fff 0%,var(--soft) 100%);padding:48px 0 60px}
+.hero .wrap{grid-template-columns:1fr 1fr;gap:56px}
+.hero h1 em{font-style:italic;color:var(--gold-d)}
+.hero-facts{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px;padding:0;margin:28px 0 0;font-size:.85rem;color:var(--muted)}
+.hero-facts li::before{content:"";display:inline-block;width:7px;height:7px;background:var(--gold);border-radius:50%;margin-right:8px}
+.collage{position:relative;display:grid;grid-template-columns:1.15fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:460px}
+.collage img{width:100%;height:100%;object-fit:cover;border-radius:4px;box-shadow:0 10px 26px rgba(20,19,15,.18)}
+.collage .c1{grid-row:1/3}
+.collage .badge{position:absolute;left:-18px;bottom:26px;background:var(--ink);color:#fff;border-left:4px solid var(--gold);padding:12px 18px;font-family:"Playfair Display",serif;font-weight:700;font-size:1.05rem;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.collage .badge small{display:block;font:500 .7rem Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.map-sec .map{height:300px}
+@media(max-width:900px){
+ .hero .wrap{grid-template-columns:1fr;gap:32px}
+ .collage{height:340px}
+ .collage .badge{left:10px;bottom:-14px}
+}
+@media(max-width:520px){.collage{height:280px}.hero-facts{font-size:.8rem}}
+.collage{grid-template-rows:minmax(0,1fr) minmax(0,1fr)}
+.collage img{min-height:0}
